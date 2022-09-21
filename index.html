@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,68 +20,71 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <img src="background.jpg" alt="background" id="background">
+  <h1>Sign-up Form</h1>
   <form action="#" method="post">
     <fieldset>
       <legend>Personal Details</legend>
-      <ul>
-        <li> 
-          <label for="first_name" name="first_name" class="label" required>First Name: </label>
-          <input type="text" name="first_name_input" id="first-name-input">
-        </li>
-        <li>
-          <label for="first_name" name="first_name" class="label">Last Name: </label>
-          <input type="text" name="first_name_input" id="first-name-input">
-        </li>
-        <li>
-          <label for="first_name" name="first_name" class="label" required>Residential Address: </label>
-          <textarea name="address" id="address" cols="40" rows="8"></textarea>
-        </li>
-        <li>
-          <label for="country" name="country">Select your continent: </label>
-          <select name="countries" id="countries">
-            <option value="">Africa</option>
-            <option value="">Antarctica</option>
-            <option value="">Asia</option>
-            <option value="">Australia</option>
-            <option value="">Europe</option>
-            <option value="">North America</option>
-            <option value="">South America</option>
+      <div id="details-container">
+        <div id="name-container">
+          <div id="first-name">
+            <label class="label" required>First Name: </label>
+            <input type="text" id="name-input" required>
+          </div>
+          <div>
+            <label class="label">Last Name: </label>
+            <input type="text" id="name-input" required>
+          </div>
+        </div>
+        <div id="address-container">
+          <label class="label" required>Residential Address: </label>
+          <textarea id="address" cols="50" rows="4"></textarea>
+        </div>
+        <div id="country-list-container">
+          <label class="label">Select your continent: </label>
+          <select id="countries">
+            <option value="none">Select</option>
+            <option value="africa" class="conutry">Africa</option>
+            <option value="antarctica" class="conutry">Antarctica</option>
+            <option value="asia" class="conutry">Asia</option>
+            <option value="australia" class="conutry">Australia</option>
+            <option value="europe" class="conutry">Europe</option>
+            <option value="northamerica" class="conutry">North America</option>
+            <option value="southamerica" class="conutry">South America</option>
           </select>
-        </li>
-      </ul>
+        </div>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Contact Details</legend>
-      <ul>
-        <li>
-          <label for="number" class="labels">Contact Number: </label>
-          <input type="number" min="10" max="10" required>
-        </li>
-        <li>
-          <label for="alternate_number" class="labels">Alternate Contact Number: </label>
-          <input type="number" min="10" max="10">
-        </li>
-        <li>
-          <label for="email">Email ID: </label>
-          <input type="email" id="mail" placeholder="evronz@mymail.com" required>
-        </li>
-        <li>
-          <label for="Feedback: " >Do you like this form?</label>
-          <ul>
-            <li>
-              <input type="radio" name="feedback">
-              <label for="Yes">Yes</label>
-            </li>
-            <li>
-              <input type="radio" name="feedback" checked>
-              <label for="no">No, I love it!</label>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <div id="contact-container">
+        <div id="contact-number">
+          <label class="label">Contact No.: </label>
+          <input type="text" minlength="10" maxlength="10" required>
+        </div>
+        <div>
+          <label class="label">Alt. Contact No.: </label>
+          <input type="text" minlength="10" maxlength="10">
+        </div>
+      </div>
+      <div id="email-container">
+        <label class="label">Email ID: </label>
+        <input type="email" id="mail" placeholder="example@mymail.com" required>
+      </div>
+      <div>
+        <label class="label">Do you like this form?</label>
+        <ul>
+          <li>
+            <input type="radio" name="feedback" style="margin-bottom: 3px;" checked>
+            <label for="yes" class="feedback-answer">Yes</label>
+          </li>
+          <li>
+            <input type="radio" name="feedback">
+            <label for="no" class="feedback-answer">No, I love it!</label>
+          </li>
+        </ul>
+      </div>
     </fieldset>
-    <button type="button">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>                            
